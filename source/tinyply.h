@@ -443,10 +443,10 @@ size_t PlyFile::PlyFileImpl::read_property_binary(const size_t & stride, void * 
 
 size_t PlyFile::PlyFileImpl::read_property_ascii(const Type & t, const size_t & stride, void * dest, size_t & destOffset, size_t destSize, std::istream & is)
 {
-    if (destOffset + stride > destSize)
-    {
-        throw std::runtime_error("unexpected EOF. malformed file?");
-    }
+    // if (destOffset + stride > destSize)
+    // {
+    //     throw std::runtime_error("unexpected EOF. malformed file?");
+    // }
 
     destOffset += stride;
     switch (t)
